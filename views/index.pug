@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title= "Spotify Session (you're poor if you use this)"
+        link(rel="stylesheet", href="/css/style.css")
+        link(rel="stylesheet", type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css")
+        meta(name="description", content="Spotify Session")
+        meta(name="keywords", content="Spotify, Music, Session")
+        meta(name="theme-color", content="#5e41ff")
+    body 
+        header 
+            .logo 
+                h1 Spotify Hession
+            .searchBar 
+                input#searchQuery(type="text", name="searchQuery", placeholder="Search...")
+            .profile
+                img.accountImage(src="")
+                p.accountName User Account 
+        .mainContainer 
+            ul.searchResults
+            .queue
+                h1 Tracklist
+                .queueContainer 
+                    ul.queueList
+        .playBar 
+            .track 
+                img(src="", alt="").trackImage
+                .trackInfos 
+                    p.trackTitle Song name
+                    p.trackArtist Artist
+            .timeline 
+                .progressBar
+                    .progressBarFill
+                .controls
+                    button.backButton
+                        i.fas.fa-caret-left 
+                    button.playButton
+                        i.fas.fa-pause
+                    button.nextButton
+                        i.fas.fa-caret-right
+            .volume
+        script(src="https://cdn.jsdelivr.net/npm/toastify-js" type="text/javascript" ) 
+        script(src="/js/script.js" defer) 

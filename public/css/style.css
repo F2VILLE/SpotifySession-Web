@@ -1,0 +1,314 @@
+@import url(/css/dark.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none !important;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: var(--background-dark);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 4px;
+}
+
+*::-webkit-scrollbar-corner {
+    display: none;
+}
+
+html,body,* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--color);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    height: 100px;
+    box-shadow: #0005 0 0 50px;
+    background-color: var(--background-dark);
+}
+
+header .logo {
+    color: var(--primary);
+    font-weight: bolder;
+}
+
+header .searchBar input {
+    padding: 9px 15px;
+    border-radius: 15px;
+    background-color: var(--background-light);
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: var(--color);
+}
+
+header .profile .accountImage {
+    width: 32px;
+    border-radius: 50%;
+}
+
+header .profile .accountName {
+    margin-left: 15px;
+}
+
+header .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 35px;
+    background-color: var(--background-darker);
+}
+
+.mainContainer {
+    height: calc(100dvh - 200px);
+    max-height: calc(100dvh - 200px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.queue {
+    width: 20%;
+    height: 100%;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: hidden;
+
+}
+
+.queueContainer {
+    overflow-y: scroll;
+}
+
+.queueTrack {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+}
+
+.queueTrackTitle {
+    font-weight: bold;
+}
+
+.queueTrackArtist {
+    color: var(--secondary);
+}
+
+.queueTrackInfos {
+    margin-left: 5px;
+}
+.queueTrack:hover {
+    background-color: var(--background-lighter);
+}
+
+.queueTrackImage {
+    width: 48px;
+}
+
+.addToQueueButton {
+    display: flex;
+    margin-right: 15px;
+}
+
+.addToQueueButton button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    color: var(--primary);
+    background: var(--background-dark);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.addToQueueButton button:disabled {
+    background-color: var(--background-darker);
+    cursor: progress;
+}
+
+.leftPart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightPart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchTrackTime {
+    color: var(--secondary);
+    margin-right: 15px;
+}
+
+.queueTrackTime {
+    color: var(--secondary);
+    font-size: 15px;
+}
+
+.queue h1 {
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.searchResults {
+    list-style: none;
+    max-height: calc(100dvh - 200px);
+    overflow-y: scroll;
+    width: 80%;
+}
+
+.searchTrack {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+}
+
+.searchTrackTitle {
+    font-weight: bold;
+}
+
+.searchTrackArtist {
+    color: var(--secondary);
+}
+
+.searchTrackInfos {
+    margin-left: 5px;
+}
+.searchTrack:hover {
+    background-color: var(--background-lighter);
+}
+
+.searchTrackImage {
+    width: 48px;
+}
+
+.playBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    height: 100px;
+    width: calc(100% - 4vw);
+    background-color: var(--background-dark);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.playBar .track {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.playBar .trackInfos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 64px;
+    margin-left: 15px;
+}
+
+.playBar .trackTitle {
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.playBar .trackArtist {
+    color: var(--secondary);
+}
+
+.playBar .trackImage {
+    width: 64px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.progressBar {
+    position: relative;
+    width: 60dvw;
+    height: 7px;
+    border-radius: 3px;
+    background-color: var(--background-lighter);
+}
+
+.progressBarFill {
+    display: block;
+    width: 50%;
+    position: absolute;
+    border-radius: 3px;
+    height: 7px;
+    background-color: var(--primary);
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.backButton, .nextButton {
+    color: var(--color);
+    background: none;
+    border: none;
+    font-size: 30px;
+}
+
+.playButton {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    border-radius: 50%;
+    background-color: var(--color);
+    color: var(--background-dark);
+    margin: 0 15px;
+}
+

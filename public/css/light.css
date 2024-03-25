@@ -1,0 +1,10 @@
+:root {
+    --background: #c3c3c3;
+    --background-dark: #b3b3b3;
+    --background-darker: #9d9d9d;
+    --background-light: rgb(229, 229, 229);
+    --background-lighter: #d7d7d7;
+    --color: #1b1b1b;
+    --secondary: #3e3e3e;
+    --primary: #9950ff;
+}
